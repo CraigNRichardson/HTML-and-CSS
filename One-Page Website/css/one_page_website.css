@@ -1,0 +1,32 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 1.1em;
+}
+
+p {
+    font-weight: 700;
+}
+
+input[type="text"], textarea {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 2% 1% 2% 7%;
+    width: 20%;
+    border-top: 1px solid #09080d;
+    border-right: 2px solid #424549;
+    border-bottom: 2px solid #424549;
+    border-left: 1px solid #090b0d;
+    margin: 10px 1em;
+    border-radius: 5px;
+    background: #13161b;
+    box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,0.15);
+    font-family: Georgia, serif;
+}
+
+textarea {
+
+    width: 70%;
+}
+   
