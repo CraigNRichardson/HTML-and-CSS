@@ -19,7 +19,7 @@
     <!-- Beginning of Home -->
     <div id="home">
       <h1 style="text-align:center;">Seven "Seconds" in Heaven:<br />US Vice Presidents who Died in Office</h1>
-        <p>
+        <p style="text-align: center;">
           Since the birth of the United States, seven of its Vice Presidents have died while in office.
           </p>
       <table>
@@ -74,72 +74,116 @@
 <!-- End of Home -->
 
 <!-- Beginning of Gallery -->
-    <div id="gallery">
-      <h1 style="text-align:center";>Gallery</h1>
+<h1 style="text-align:center;">Gallery</h1>
+<div class="row">
+  <div class="column">
+    <img src="images/GeorgeClinton.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/ElbridgeGerry.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/WilliamKing.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/HenryWilson.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/ThomasHendricks.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/GarretHobart.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="images/JamesSherman.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
 
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-<table>
-  <tr>
-    <td>
-      <figure>
-      <img src="./images/GeorgeClinton.jpg" alt="George Clinton" style="width:100px">
-      <figcaption>George Clinton</figcaption>
-      </figure>
-      </td>
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="images/GeorgeClinton.jpg" style="width:100%">
+    </div>
 
-      <td>
-        <figure>
-  <img src="./images/ElbridgeGerry.jpg" alt="Elbridge Gerry" style="width:100px">
-  <figcaption>Elbridge Gerry</figcaption>
-  </figure>
-        </td>
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="images/ElbridgeGerry.jpg" style="width:100%">
+    </div>
 
-        <td>
-          <figure>
-    <img src="./images/WilliamKing.jpg" alt="William King" style="width:100px">
-    <figcaption>William King</figcaption>
-    </figure>
-          </td>
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="images/WilliamKing.jpg" style="width:100%">
+    </div>
 
-          <td>
-            <figure>
-            <img src="./images/HenryWilson.jpg" alt="Henry Wilson" style="width:100px">
-            <figcaption>Henry Wilson</figcaption>
-            </figure>
-            </td>
-    </tr>
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="images/HenryWilson.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="images/ThomasHendricks.jpg" style="width:100%">
+    </div>
+   
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="images/GarretHobart.jpg" style="width:100%">
+    </div>
+   
+    <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="images/JamesSherman.jpg" style="width:100%">
+    </div>
 
-      <tr>
-        <td>
-          <figure>
-    <img src="./images/ThomasHendricks.jpg" alt="Thomas Hendricks" style="width:100px">
-    <figcaption>Thomas Hendricks</figcaption>
-    </figure>
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-          </td>
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
 
-          <td>
-            <figure>
-              <img src="./images/GarretHobart.jpg" alt="Garret Hobart" style="width:100px">
-              <figcaption>Garret Hobart</figcaption>
-              </figure>
-            </td>
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="images/GeorgeClinton.jpg" onclick="currentSlide(1)" alt="George Clinton">
+    </div>
 
-            <td>
-              <figure>
-        <img src="./images/JamesSherman.jpg" alt="James Sherman" style="width:100px">
-        <figcaption>James Sherman</figcaption>
-        </figure>
-              </td>
-        </tr>
+    <div class="column">
+      <img class="demo" src="images/ElbridgeGerry.jpg" onclick="currentSlide(2)" alt="Elbridge Gerry">
+    </div>
 
-</table>
-      </div>
+    <div class="column">
+      <img class="demo" src="images/WilliamKing.jpg" onclick="currentSlide(3)" alt="William King">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/HenryWilson.jpg" onclick="currentSlide(4)" alt="Henry Wilson">
+    </div>
+    
+    <div class="column">
+      <img class="demo" src="images/ThomasHendricks.jpg" onclick="currentSlide(5)" alt="Thomas Hendricks">
+    </div>
+   
+    <div class="column">
+      <img class="demo" src="images/GarretHobart.jpg" onclick="currentSlide(6)" alt="Garret Hobart">
+    </div>
+  
+    <div class="column">
+      <img class="demo" src="images/JamesSherman.jpg" onclick="currentSlide(7)" alt="James Sherman">
+    </div>
+  </div>
+</div>
+
 <!-- End of Gallery -->
 <!-- Beginning of Video secton -->
 
   <div id="video">
-<h1 style="text-align:center";>Video of Vice Presidents of the United States</h1>
+<h1 style="text-align:center">Video of Vice Presidents of the United States</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sCVWzhstXfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     </div>
@@ -147,7 +191,7 @@
 
     <!-- Beginning of Contact Section -->
     <div id="contact">
-      <h1 style="text-align:center";>Contact Us!</h1>
+      <h1 style="text-align:center">Contact Us!</h1>
       <p>
         Let us know if you hear about the death of an incumbent Vice President of the United States:
         </p>
@@ -158,6 +202,7 @@
           <textarea placeholder="Tell us what you know!"></textarea>
       </div>
       <!-- End of Contact Section -->
+      <script src="JS/one_page_website.js"></script>
   </body>
   <footer>
 www.sevensecondsinheaven.com &nbsp|&nbsp &copy; 2020 &nbsp;|&nbsp;<a href="#home" id="link">HOME</a>
