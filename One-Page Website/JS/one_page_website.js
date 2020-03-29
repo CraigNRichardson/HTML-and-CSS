@@ -16,6 +16,33 @@ function openModal() {
     showSlides(slideIndex += n);
   }
   
+  // Website Fade
+
+  $(function() {
+    $('body').removeClass('fade-out');
+  });
+
+  // Form Validation
+
+  function validateForm() {
+    var f = document.forms["myForm"]["phone"].value;
+    if (f == "") {
+      alert("Phone Number must be filled out");
+      return false;
+    }
+  }
+
+  // popup contact
+
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+
+
   // Thumbnail image controls
   function currentSlide(n) {
     showSlides(slideIndex = n);
@@ -38,3 +65,14 @@ function openModal() {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
   }
+
+  $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/one_page_website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>VP RIP</title>
   </head>
   <body>
+    <script>document.body.className += ' fade-out';</script>
     <div class="wrap">
       <div class="menu-container">
             <a href="#home" id="link">HOME</a>
@@ -18,10 +20,35 @@
     </div>
     <!-- Beginning of Home -->
     <div id="home">
-      <h1 style="text-align:center;">Seven "Seconds" in Heaven:<br />US Vice Presidents who Died in Office</h1>
+      <h1 style="text-align:center;">Seven "Seconds" in Heaven:<br />US Vice Presidents who <span id="animate">Died</span> in Office</h1>
+      <img id="seal" src="images/600px-Seal_of_the_Vice_President_of_the_United_States.svg.png" width="300px">
         <p style="text-align: center;">
           Since the birth of the United States, seven of its Vice Presidents have died while in office.
           </p>
+          <div id="slideshow">
+            <div>
+              <img src="images/GeorgeClinton.jpg">
+            </div>
+            <div>
+              <img src="images/ElbridgeGerry.jpg">
+            </div>
+            <div>
+              <img src="images/GarretHobart.jpg">
+            </div>
+            <div>
+              <img src="images/HenryWilson.jpg">
+            </div>
+            <div>
+              <img src="images/JamesSherman.jpg">
+            </div>
+            <div>
+              <img src="images/SchuylerColfax.jpg">
+            </div>
+            <div>
+              <img src="images/ThomasHendricks.jpg">
+            </div>
+            
+         </div>
       <table>
         <th>Vice President</th>
         <th>Term in Office</th>
@@ -189,17 +216,38 @@
     </div>
     <!-- End of Video Section -->
 
+    
+
+
+<button class="open-button" onclick="openForm()">Sign Up for Updates!</button>
+    <div class="form-popup" id="popupForm">
+      <form action="" class="form-container">
+        <p>Sign Up!</p>
+        <label for="fName"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="fName" required>
+        <label for="lName"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="lName" required><br>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+
+      </form>
+    </div>
+
     <!-- Beginning of Contact Section -->
     <div id="contact">
       <h1 style="text-align:center">Contact Us!</h1>
       <p>
-        Let us know if you hear about the death of an incumbent Vice President of the United States:
+        Let us know if you hear about the death of the incumbent Vice President of the United States:
         </p>
-        <form action="" method="post">
-          <input type="text" value="" placeholder="First Name" />
-          <input type="text" value="" placeholder="Last Name" />
-          <input type="text" value="" placeholder="Email Address" />
-          <textarea placeholder="Tell us what you know!"></textarea>
+        <form name="myForm" action="" method="post" onsubmit="return validateForm()">
+          <input type="text" name="fName" value="" placeholder="First Name" />
+          <input type="text" name="lName" value="" placeholder="Last Name" />
+          <input type="text" name="email" value="" placeholder="Email Address" />
+          <input type="text" name="phone" value="" placeholder="Phone Number" />
+          <textarea placeholder="Tell us what you know!"></textarea><br>
+          <button id="submit">Submit</button>
       </div>
       <!-- End of Contact Section -->
       <script src="JS/one_page_website.js"></script>

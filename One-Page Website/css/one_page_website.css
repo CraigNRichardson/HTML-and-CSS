@@ -48,8 +48,7 @@
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .close:hover {
     color: #999;
     text-decoration: none;
     cursor: pointer;
@@ -127,11 +126,31 @@
 
 body {
     font-family: Georgia, serif;
-    font-size: 1.1em;
+    font-size: 1rem;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+td {
+  font-size: 1.5vw;
+}
+
+th {
+  font-size: 1.5vw;
 }
 
 p {
     font-weight: 700;
+    font-size: 2vw;
 }
 
 input[type="text"], textarea {
@@ -150,6 +169,19 @@ input[type="text"], textarea {
     background: #13161b;
     box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,0.15);
     font-family: Georgia, serif;
+}
+
+#submit {
+  background-color: #13161b;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 5px;
+  font-family: Georgia, serif;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 15px;
+  cursor: pointer;
+  color: #8d8e8f;
 }
 
 textarea {
@@ -172,4 +204,118 @@ table {
 
 #row {
     margin: auto;
+}
+
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#animate {
+  animation: colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+  0% {color:lightgrey;}
+  50% {color:red;}
+  100% {color:lightgrey;}
+}
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale (1,1);
+  }
+  50% {
+    transform: scale(1.2,1.2);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+#seal {
+  display:block;
+  margin:auto;
+  animation:zoominoutsinglefeatured 15s forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#slideshow {
+  margin: 20px auto;
+  position: relative;
+  width: 220px;
+  height: 290px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
 }
